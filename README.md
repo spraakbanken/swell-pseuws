@@ -53,7 +53,7 @@ $ source venv/bin/activate
 (venv) $ pip3 install nltk pandas python-Levenshtein gunicorn
 (venv) $ python3
 >>> import nltk
->>> nltk.download('punkt')
+>>> nltk.download('punkt_tab')
 ```
 
 ### Running
