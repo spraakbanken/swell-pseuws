@@ -18,8 +18,8 @@ def app(env, start_response):
     cd = qd.copy()
     cd.update(pd)
 
-    if 'text' in pd:
-        out = json.dumps(source.identify(pd['text']))
+    if 'text' in cd:
+        out = json.dumps(source.identify(cd['text']))
         body = [out, '']
     else:
         body = open('README.md', encoding="utf-8").readlines()
