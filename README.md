@@ -44,14 +44,18 @@ Running the server
 
 ### Requirements
 
-Your mileage may vary.
-
 ```sh
+# Create virtual environment (venv)
 $ python3 -m venv venv
+
+# Activate the venv
 $ source venv/bin/activate
-(venv) $ pip3 install --upgrade setuptools
-(venv) $ pip3 install nltk pandas python-Levenshtein gunicorn
-(venv) $ python3
+
+# Install Python dependencies
+(venv) $ pip install -r requirements.txt
+
+# Install NLTK model
+(venv) $ python
 >>> import nltk
 >>> nltk.download('punkt_tab')
 ```
@@ -59,5 +63,9 @@ $ source venv/bin/activate
 ### Running
 
 ```sh
+# Activate the venv
+$ source venv/bin/activate
+
+# Run the app
 (venv) $ gunicorn anon:app
 ```
